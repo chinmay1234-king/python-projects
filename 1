@@ -1,0 +1,12 @@
+# RENT CALCULATOR
+
+
+rent=int(input("emnter the rent amount: "))
+food = int(input("enter the amount of food : "))
+electricity_spend=int(input("enter the total amount of electricity spent: "))
+charge_perunit=int(input("enter the charge per unit : "))
+persons=int(input("enter the total no of persons living: "))
+
+total_bill=electricity_spend*charge_perunit
+output=(total_bill+food+rent)/persons
+print(output)
