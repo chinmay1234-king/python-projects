@@ -1,0 +1,19 @@
+import qrcode
+
+upi_id=input("enter ur upi_id")
+
+phonepay_url=f"upi://pay?pa={upi_id}&pn=receiptant%20name&mc=1234"
+paytm_url=f"upi://pay?pa={upi_id}&pn=receiptant%20name&mc=1234"
+googlepay_url=f"upi://pay?pa={upi_id}&pn=receiptant%20name&mc=1234"
+
+phonepay_qr=qrcode.make(phonepay_url)
+paytm_qr=qrcode.make(paytm_url)
+googlepay_url=qrcode.make(googlepay_url)
+
+phonepay_qr.save("phonepay_qr.png")
+paytm_qr.save("paytm_qr.png")
+googlepay_qr.save("goglepay_qr.png")
+
+phonepay_qr.show()
+paytm_qr.show()
+googlepay_qr.show()
